@@ -178,5 +178,5 @@ while ($true) {
     }
 
     Write-Log "Sleeping for $BackupIntervalMinutes minutes before next cycle."
-    Start-Sleep -Minutes $BackupIntervalMinutes
+    Start-Sleep -Seconds ($BackupIntervalMinutes * 60)
 }
